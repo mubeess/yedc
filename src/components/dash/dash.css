@@ -1,0 +1,75 @@
+.dashContainer{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+}
+.dashContainer .mainDashh{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 120px;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+   
+    background-color:transparent;
+}
+.mainDashh .paymentDash{
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color:transparent;
+}
+.mainDashh .infoPay{
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color:transparent;
+}
+.paymentDash h1,.infoPay h1{
+    text-align: center;
+    color: rgba(73, 65, 65, 0.644);
+}
+.currentTr{
+    margin-top: 30px;
+
+}
+.currentTr h2{
+    text-align: center;
+    color:rgba(73, 65, 65, 0.644) ;
+}
+.indTrans{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.indTrans .mainHist{
+    display: grid;
+}
+.indTrans .mainHist h2{
+    color: rgba(73, 65, 65, 0.644);
+}
+.tick span{
+    float:right;
+    margin-right: 20px;
+}
+.tick span svg{
+    color: brown;
+}
+@media screen and (max-width:886px){
+    .dashContainer .mainDashh{
+        grid-template-columns: 1fr;
+        margin-left: 20px;
+    }
+}

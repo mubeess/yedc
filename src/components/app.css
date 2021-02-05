@@ -1,0 +1,249 @@
+
+@keyframes firstOp{
+    0%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes secondOp{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes thirdOp{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.homeContainer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(73, 65, 65, 0.644);
+    position: relative;
+    margin-top: 100px;
+  
+}
+.nav{
+    width: 100%;
+    height: 100px;
+    background: rgba(128, 128, 128, 0.411);
+    position: fixed;
+    top: 0;
+    backdrop-filter:blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 0.1px solid rgba(128, 128, 128, 0.137);
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+}
+.nav .logo{
+    width: 100px;
+    height: 70px;
+    background-color:transparent;
+    margin-top: 10px;
+    margin-left:20px;
+}
+.nav .logo img{
+width: 100%;
+height: 100%;
+}
+.nav .links{
+    width: 50%;
+    height: 70px;
+    background-color:transparent;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 20px;
+   justify-content: flex-end;
+    display: flex;
+}
+.sec{
+    width: 100%;
+    height: 80vh;
+    background-color:transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: -1;
+   
+  
+}
+.sec div{
+    position: relative;
+   
+}
+.sec div .write{
+margin-left: 20px;
+margin-top: 100px;
+position: absolute;
+transition: all 2s;
+perspective: 200px;
+
+}
+.sec div .write:nth-child(1){
+    opacity: 1;
+    animation: firstOp 20s   infinite linear;
+}
+.sec div .write:nth-child(2){
+    opacity: 0;
+    animation: secondOp 20s   infinite linear;
+}
+.sec div .write:nth-child(3){
+    opacity: 0;
+    /* animation: thirdOp 5s 10s   infinite linear; */
+}
+.sec div .write .writeHead{
+    color:rgba(255, 255, 255, 0.966);
+    font-size:80px;
+    line-height: 70px;
+    font-weight: 200;
+    text-align: center;
+}
+.sec div .write .writeHead span{
+    color: lightcoral;
+}
+.sec div .write .writeHead span.afr{
+    color: lightgreen;
+}
+.sec div .write p{
+    font-size: 30px;
+    color: rgb(240, 240, 240);
+    text-align: center;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+.sec div .write p span{
+    font-weight: bolder;
+    color: lightblue;
+}
+.sec div.phone{
+    position: relative;
+    background-image:url(./main/cardssss.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    z-index: 1;
+   
+}
+.sec div.phone img{
+ width: 100%;
+ height: 100%;
+
+ opacity: 0;
+ transform: skewX(-10deg);
+}
+.sec div.phone img:nth-child(2){
+    position: absolute;
+    margin-top: 0px;
+    width: 100px;
+    height: 100px;
+}
+.sec .anim{
+    position: relative;
+    margin-left: 50px;
+}
+.sec .anim h1.goal{
+    position: absolute;
+    margin-left: auto;
+    background-color: turquoise;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .inp{
+    bottom: 0;
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 50%;
+    display: flex;
+}
+@media screen and (max-width:886px) {
+    .sec{
+        grid-template-columns: 1fr;
+    }
+    .sec div.phone{
+        background-position: bottom;
+        background-size:contain;
+        margin-top: 150px;
+        width: 100%;
+        height: 300px;
+    }
+    .sec .inp{
+        margin-top: 480px;
+        display: block;
+        position: relative;
+    }
+}
+@media screen and (max-width:586px) {
+.sec{
+    grid-template-columns: 1fr;
+}
+.sec div.phone img{
+    width: 100%;
+    height: 70%;
+    margin-top: 500px;
+    transform: skewX(0deg);
+   }
+   .sec div .write .writeHead{
+       font-size: 40px;
+       line-height: 50px;
+   }
+   .sec div .write p{
+       font-size: 20px;
+   }
+   .sec div.phone{
+       background-position: bottom;
+       background-size:contain;
+       margin-top: 50px;
+   }
+   .sec .inp{
+       margin-top: 480px;
+       display: block;
+       position: relative;
+   }
+  
+ }
+ 

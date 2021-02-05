@@ -1,0 +1,123 @@
+.stepsContainer{
+    width: 100%;
+    position: relative;
+    height: 200vh;
+    background-color: white;
+    z-index: 1;
+    margin-top: 200px;
+    padding: 20px;
+}
+.stepsContainer .step{
+
+
+}
+.stepsContainer .step .mainStep{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
+    width: 100%;
+    height: 120vh;
+    margin-top: 50px;
+}
+.mainStep .stp{
+    width: 80%;
+    height: 600px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    padding: 10px;
+    margin-left: 20px;
+    position: relative;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s;
+    background-image: url(./signinree.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.mainStep .stp:nth-child(2){
+    background-image: url(./signupreact.png);
+}
+.mainStep .stp:nth-child(3){
+    background-image: url(./paymentsreac.png);
+}
+.mainStep .stp:hover{
+    box-shadow: 0px 0px 3px rgba(236, 75, 75, 0.5);
+}
+.mainStep .stp h3{
+text-align: center;
+font-weight: lighter;
+margin-top: 20px;
+}
+.stepsContainer .nepaConta{
+width: 100%;
+height: 400px;
+background-color: transparent;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.nepaConta .nepaImg{
+width: 100%;
+height: 100%;
+border-right: 1px solid rgba(128, 128, 128, 0.281);
+}
+.nepaConta .nepaImg img{
+    width: 80%;
+    height: 100%;
+    margin-left: 20px;
+   
+}
+.nepaConta .nepaCn{
+    width: 80%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.055);
+    backdrop-filter:blur(40px);
+    margin-left: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.nepaConta .nepaCn h2{
+    text-align: center;
+    font-weight: lighter;
+}
+.maintain,.loginFoot{
+    text-align: center;
+    font-weight: lighter;
+ 
+}
+.foo{
+    background-color: rgba(0, 0, 0, 0.041);
+    width: 100%;
+}
+@media screen and (max-width:886px){
+    .stepsContainer{
+        margin-top: 500px;
+        padding:5px;
+    }
+    .stepsContainer .step .mainStep{
+        grid-template-columns: 1fr;
+    }
+    .mainStep .stp{
+        margin-top: 20px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+    .stepsContainer .nepaConta{
+        grid-template-columns: 1fr;
+        margin-top: 600px;
+    }
+    .nepaConta .nepaImg{
+        margin-bottom: 20px;
+    }
+    .nepaConta .nepaImg img{
+        height: 300px;
+    }
+    .nepaConta .nepaCn{
+        height: 400px;
+        margin-top: 20px;
+    }
+    .foo{
+        margin-top: 400px;
+    }
+}
